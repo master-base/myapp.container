@@ -1,5 +1,10 @@
 FROM alpine:latest
 
+WORKDIR /box
+COPY . /box
+
+RUN mkdir /box/pb
+
 # arm64 | amd64
 ARG OS_ARCH=arm64
 ARG PB_VERSION=0.22.13
